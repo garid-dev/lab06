@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f7f2ea">
-    <title>Lab 6 Gallery</title>
+    <meta name="description" content="Дэлхийн алдартай уран зургуудын интерактив зургийн цомог.">
+    <title>Лаб 6 | Уран зургийн цомог</title>
     <link rel="stylesheet" href="lab6-gallery.css">
     <script src="lab6-gallery.js" defer></script>
   </head>
@@ -14,9 +15,11 @@
       <span>Зургийн цомог ачаалж байна...</span>
     </div>
 
-    <div class="page-shell">
+    <a class="skip-link" href="#main-content">Үндсэн агуулга руу очих</a>
+
+    <div class="page-shell" id="top">
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="lab6 нүүр хуудас">
+        <a class="brand" href="#top" aria-label="Зургийн цомгийн эхлэл">
           <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Зургийн gallery лого">
             <defs>
               <linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1">
@@ -35,18 +38,31 @@
           </span>
         </a>
 
-        <button class="theme-toggle" type="button" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">🌙</span>
-          <span class="theme-label">Харанхуй горим</span>
-        </button>
+        <nav class="site-nav" aria-label="Үндсэн цэс">
+          <a href="#gallery">Цомог</a>
+          <a href="#location">Байршил</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="theme-toggle" type="button" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Харанхуй горим</span>
+          </button>
+        </div>
       </header>
 
-      <main id="top">
+      <main id="main-content">
         <section class="hero" aria-labelledby="page-title">
           <div>
+            <p class="eyebrow">УРАН ЗУРАГ</p>
             <h1 id="page-title">Зураг бүр өөрийн гэсэн түүхтэй</h1>
             <p class="lead">Дэлхийд алдартай уран зургуудыг нэг дороос үзээрэй.</p>
             <a class="primary-btn" href="#gallery">Зургийн цомог үзэх</a>
+            <ul class="gallery-stats" aria-label="Цомгийн мэдээлэл">
+              <li><strong>08</strong><span>уран зураг</span></li>
+              <li><strong>06</strong><span>улс орон</span></li>
+              <li><strong>500+</strong><span>жилийн урлаг</span></li>
+            </ul>
           </div>
 
           <div class="hero-media">
@@ -196,16 +212,16 @@
                   </div>
                 </div>
                 <div class="card-face card-back">
-                  <h3>Girl with a Pearl Earring</h3>
+                  <h3>The Great Wave off Kanagawa</h3>
                   <ul>
                     <li><strong>Огноо:</strong> 1831</li>
-                    <li><strong>Тайлбар:</strong> Цунами</li>
+                    <li><strong>Тайлбар:</strong> Канагавагийн их давалгаа</li>
                   </ul>
                 </div>
               </div>
             </article>
 
-            <article class="gallery-card" tabindex="0" style="--index: 2" aria-label="The Great Wave off Kanagawa">
+            <article class="gallery-card" tabindex="0" style="--index: 2" aria-label="The Last Supper">
               <div class="card-inner">
                 <div class="card-face card-front">
                   <img src="https://images.immediate.co.uk/production/volatile/sites/7/2021/03/GettyImages-550119221-e490377.jpg" alt="Сүүлчийн зоог" loading="lazy">
@@ -227,10 +243,11 @@
           </div>
         </section>
 
-        <section class="map-section" aria-labelledby="map-title">
+        <section id="location" class="map-section" aria-labelledby="map-title">
           <div class="section-heading">
             <p class="eyebrow">LOCATION</p>
             <h2 id="map-title">Байршил</h2>
+            <p class="muted">Улаанбаатар хотын байршлыг газрын зургаас хараарай.</p>
           </div>
           <iframe
             class="map-frame"
@@ -242,7 +259,20 @@
         </section>
       </main>
 
-      <footer>Garid · 2026 </footer>
+      <footer class="site-footer">
+        <div class="footer-main">
+          <a class="footer-brand" href="#top">Зургийн цомог портал</a>
+          <p>Урлагийн бүтээл бүр түүх, мэдрэмж, цаг үеийг хадгалдаг.</p>
+          <nav class="footer-nav" aria-label="Хөл хэсгийн цэс">
+            <a href="#top">Эхлэл</a>
+            <a href="#gallery">Зургийн цомог</a>
+            <a href="#location">Байршил</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Гарьд</span>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
